@@ -1,0 +1,15 @@
+BEGIN{
+ sum=0;
+ }
+ {
+ sum=sum+$5;
+ }
+END{
+ print "The Number of Files:" NR;
+ print "The Total Size of all files: " sum " Bytes";
+ print "The Total Size of all files: " sum/1024 " KB";
+ print "The Total Size of all files: " sum/1024/1024 " MB";
+ print ""
+ }
+
+ 

@@ -1,0 +1,23 @@
+ if(NR==1){
+ min_file_size=$5;
+ min_file_name=$9;
+ max_file_size=$5;
+ max_file_name=$9;
+ }
+ else{
+ if($5<min_file_size){
+ min_file_size=$5;
+ min_file_name=$9;
+ }
+ if($5>max_file_size){
+ max_file_size=$5;
+ max_file_name=$9;
+ }
+ }
+ }
+ END{
+ print "The Smallest File Name: " min_file_name;
+ print "The Smallest File Size: " min_file_size;
+ print "The Largest File Name: " max_file_name;
+ print "The Largest File Size: " max_file_size;
+ }
